@@ -111,7 +111,7 @@
                     lbl.style.textDecoration = "line-through"
                 else
                     lbl.style.textDecoration = "none"
-                fetch('http://localhost:3000/Todo/update/' + id, 
+                fetch('/Todo/update/' + id, 
                 { 
                     method : 'PATCH', 
                     body : JSON.stringify({ status: checkbox.checked}),
@@ -130,7 +130,7 @@
                 let Sid = btn.parentElement.id
                 let id = Sid.split("_")[1]
                 let div = document.querySelector("#" + Sid) 
-                fetch('http://localhost:3000/Todo/delete/' + id, 
+                fetch('/Todo/delete/' + id, 
                 { 
                     method : 'DELETE', 
                     headers : {'Content-Type': 'application/json; charset=UTF-8'} 
