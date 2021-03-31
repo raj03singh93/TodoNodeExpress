@@ -30,7 +30,7 @@ app.use(express.json())
 let Todo = require("./Controller/TodoController")
 app.use("/Todo", Todo.routes)
 app.get("/", (req, res) => {
-    res.send("Welcome to the app")
+    res.redirect('/Todo/getTodo')
 })
 
 app.listen(process.env.PORT || 3001, () => { console.log("Server is up and running...") })
